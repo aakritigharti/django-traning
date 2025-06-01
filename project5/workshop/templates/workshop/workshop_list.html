@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{title}}</title>
+</head>
+<body>
+    <br>
+    {{workshops}}
+    <br>
+    {% for item in workshops %}
+    <a href="{% url 'workshop_detail' item.id %}">{{item.title}}</a>
+    <br>
+    {% endfor %}
+    <hr>
+    <br> 
+    {{members}}
+</body>
+</html>
